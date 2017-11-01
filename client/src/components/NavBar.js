@@ -12,18 +12,18 @@ const StyledNavBar = styled.div`
 `
 const StyledAnchors = styled.a`
     padding: 20px;
-`
+    color: rgba(31, 75, 247, .9)
+    `
 
 class NavBar extends Component {
     render() {
         return (
             <StyledNavBar>
-                
-                    <h1>Vagabond</h1>
-                <div><StyledAnchors href="#">Sign-Up</StyledAnchors>
-                    <StyledAnchors href="#">Log in</StyledAnchors></div>
-                    
-                
+                <h1>Vagabond</h1>
+                <div>
+                    <StyledAnchors href="#">Sign-Up</StyledAnchors>
+                    <StyledAnchors href="#">Log in</StyledAnchors>
+                </div>
             </StyledNavBar>
         );
     }
