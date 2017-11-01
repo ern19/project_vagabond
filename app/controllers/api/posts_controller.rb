@@ -1,5 +1,6 @@
 class Api::PostsController < ApplicationController
     def index 
-        render html:"Post"
+        @posts = Post.all
+        render json: @posts
     end
 end
