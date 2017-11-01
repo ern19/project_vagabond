@@ -17,7 +17,7 @@ atlanta = City.new({
         }),
         Post.create({
             title: "Everyone Calm the down",
-            content: "Hands On Atlanta helps individuals, families, corporate and community groups strengthen Greater Atlanta through service at more than 400 nonprofit organizations and schools.  Hands On Atlanta volunteers are at work every day of the year tutoring and mentoring children, helping individuals and families make pathways out of poverty, improving Atlanta’s environment, and more.  Hands On Atlanta is an affiliate of the HandsOn Network, an association of 250 volunteer service organizations across 16 countries",
+            content: "Hands On Atlanta helps individuals, families, corporate and community groups strengthen Greater Atlanta through service at more than 400 nonprofit organizations and schools.  Hands On Atlanta volunteers are at work every day of the year tutoring and mentoring children, helping individuals and families make pathways out of poverty, improving Atlanta’s environment, and more.  Hands On Atlanta is an affiliate of the HandsOn Network, an association of 250 volunteer service organizations across 16 countries"
         })]
 })
 
