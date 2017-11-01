@@ -1,8 +1,8 @@
 class Api::CitiesController < ApplicationController
     def index
-        @cities = Cities.all 
+        @cities = City.all 
         render json: @cities
-        
+
     end
     # def create
     #     @cities = Cities.create!(cities_params)
