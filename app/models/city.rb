@@ -1,3 +1,3 @@
 class City < ApplicationRecord
-    has_many :posts, dependant: :destroy
+    has_many :posts
 end
