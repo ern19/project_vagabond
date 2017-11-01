@@ -11,24 +11,22 @@ class Api::CitiesController < ApplicationController
         @acity = City.create!(city_params)
         render json: @city
     end
-    def
+    def update
+        @city = City.find(params[:id])
+        @city.update!(city_params)
         
+        render json: @city
     end
-    def
-        
-    end
-    end
-    def
-        
-    end
-    def
-        
-    end
+    def destroy
+        @city = City.find(parms[:id]).delete
 
+        render status: :ok
+    end
+    
     private
 
-    def
-        
+    def city_params
+        params.require(:city).permit(:name, :photo_url, :description)
     end
 
     
