@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>This is a splash page</h1>
+        <h1>vagabond!</h1>
       </div>
     );
   }
