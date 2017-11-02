@@ -4,8 +4,15 @@ body{
 a{
   color: #747578;
   text-shadow: 1px 1px #72E0FF;
+  
 }
 Link{
   color: #747578;
   text-shadow: 1px 1px #72E0FF;
+}
+h1{
+  font-family: 'Bungee Shade', cursive;
+}
+p{
+  font-family: 'Roboto', sans-serif
 }
