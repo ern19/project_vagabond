@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledNavBar = styled.div` 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.5rem;
 
