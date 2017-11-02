@@ -43,7 +43,7 @@ class City extends Component {
                     </CardText>
                     
                 </Card>
-                <PostList posts={this.state.posts}/>
+                <PostList posts={this.state.posts} city={this.state.city}/>
             </div>
         );
     }

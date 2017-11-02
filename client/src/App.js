@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import CitiesList from './components/CitiesList.js'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import City from './components/City.js'
+import Post from './components/Post.js'
 class App extends Component {
 
   state = {
@@ -34,7 +35,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={CitiesListComponent} />
               <Route exact path="/cities/:cityId" component={City} />
-
+              <Route exact path="/cities/:cityId/posts/postId" component={Post} />
             </Switch>
           </div>
         </Router>
