@@ -3,7 +3,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 
 import {Link} from 'react-router-dom'
 class CitiesList extends Component {
-    render(props) {
+    render() {
         return (
             <div>
                 {

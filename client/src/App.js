@@ -35,7 +35,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={CitiesListComponent} />
               <Route exact path="/cities/:cityId" component={City} />
-              <Route exact path="/cities/:cityId/posts/postId" component={Post} />
+              <Route exact path="/cities/:cityId/posts/:postId" component={Post} />
             </Switch>
           </div>
         </Router>
