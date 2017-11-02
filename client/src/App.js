@@ -1,17 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar.js'
 import styled from 'styled-components'
-
+import axios from 'axios'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import CitiesList from './components/CitiesList.js'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <NavBar />
 
-        
-      </div>
+  state = {
+      cities: []
+  }
+  
+  async componentWillMount() {
+      try {
+        const response = await axios.get('/api/cities')
+        console.table(response.data)
+        this.setState({cities: response.data})
+      } catch (error) { 
+        console.log(error)
+      }
+  }
+  render() {
+
+    const CitiesListComponent = () => (<CitiesList cities={this.state.cities}/>)
+    return (
+      <MuiThemeProvider>
+        <Router>
+          <div className="App">
+            <NavBar />
+            
+            <Switch>
+              <Route exact path="/" render={CitiesListComponent} />
+              
+
+            </Switch>
+          </div>
+        </Router>
+      </MuiThemeProvider>
     );
   }
 }
