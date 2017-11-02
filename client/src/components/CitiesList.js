@@ -9,7 +9,11 @@ class CitiesList extends Component {
                 {
                     this.props.cities.map((city, index) => {
                         return (
-                            <Card>
+                            <Card style={{
+                               
+                                margin: '5px',
+                                
+                            }}>
                                 <CardMedia
                                     overlay={<CardTitle title={city.name} />}
                                     >
