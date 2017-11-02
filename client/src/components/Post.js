@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import {Redirect} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 
 class Post extends Component {
 
     state = {
         post: {},
-        redirectToCity: false 
+        redirectToCity: false
     }
 
     async componentWillMount() {
@@ -21,11 +21,10 @@ class Post extends Component {
             console.log(error)
         }
     }
-
     deletePost = async () => {
         if(window.confirm('Delete the item?')) {
             const cityId = this.props.match.params.cityId
-            const postId  = this.props.match.params.postId
+            const postId = this.props.match.params.postId
             
             const res = await axios.delete(`/api/cities/${cityId}/posts/${postId}`)
             this.setState({post: res.data, redirectToCity: true})  
@@ -33,6 +32,7 @@ class Post extends Component {
     }
     render() {
         const cityId = this.props.match.params.cityId
+        const postId = this.props.match.params.postId
         if (this.state.redirectToCity) {
             return <Redirect to ={`/cities/${cityId}`}/>
         }
@@ -41,6 +41,7 @@ class Post extends Component {
                 <h2>{this.state.post.title}</h2>
                 <p>{this.state.post.content}</p>
                 <button onClick={() => {this.deletePost()}}>Delete this post</button>
+                <Link to={`/cities/${cityId}/posts/${postId}/edit`}>Edit</Link>
             </div>
         );
     }

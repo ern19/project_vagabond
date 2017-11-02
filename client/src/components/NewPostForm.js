@@ -7,9 +7,9 @@ class NewPostForm extends Component {
     state={
         post: {
             title: "",
-            content: ""
+            content: "",
         },
-        
+        refresh: false
     }
         
         
@@ -27,10 +27,13 @@ class NewPostForm extends Component {
         const response = await axios.post(`/api/cities/${cityId}/posts`, {
             "post": this.state.post
         })
+        this.setState({refresh: true})
     }
 
     render() {
-        
+        if (this.state.refresh){
+            window.location.reload()
+        }
         return (
             <div>
                 <h1>New Post</h1>
