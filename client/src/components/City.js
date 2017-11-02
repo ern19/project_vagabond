@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import PostList from './PostList'
 import {Link} from 'react-router-dom'
+import NewPostForm from './NewPostForm'
 class City extends Component {
 
     state = {
@@ -30,21 +31,27 @@ class City extends Component {
         }
     }
     render() {
-        return (
-            <div>
-                <Card>
-                    <CardMedia
-                        overlay={<CardTitle title={this.state.city.name} />}
-                        >
-                        <img src={this.state.city.photo_url} alt="city pic" />
-                    </CardMedia>
-                    <CardText>
-                        {this.state.city.description}
-                    </CardText>
+        const cityId = this.props.match.params.cityId        
+            return (
+                <div>
                     
-                </Card>
-                <PostList posts={this.state.posts} city={this.state.city}/>
-            </div>
+                    <Card>
+                        <CardMedia
+                            overlay={<CardTitle title={this.state.city.name} />}
+                            >
+                            <img src={this.state.city.photo_url} alt="city pic" />
+                        </CardMedia>
+                        <CardText>
+                            {this.state.city.description}
+                        </CardText>
+                        
+                    </Card>
+                    <Link to={`/cities/${cityId}/posts/new`}>Create New Post</Link>
+                    <NewPostForm/>
+                    <PostList posts={this.state.posts} city={this.state.city}/>
+                    
+            
+                </div>
         );
     }
 }

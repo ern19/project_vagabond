@@ -8,7 +8,7 @@ class PostList extends Component {
         return (
             <div>
                 {
-                    this.props.posts.map((post) => {
+                    this.props.posts.map((post, index) => {
                         return (
                             <div>
                                 <h2>{post.title}</h2>

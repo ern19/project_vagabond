@@ -7,7 +7,7 @@ class CitiesList extends Component {
         return (
             <div>
                 {
-                    this.props.cities.map((city) => {
+                    this.props.cities.map((city, index) => {
                         return (
                             <Card>
                                 <CardMedia
