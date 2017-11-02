@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import {Redirect} from 'react-router-dom'
 import TextField from "material-ui/TextField"
-
+import FlatButton from 'material-ui/FlatButton';
 class NewPostForm extends Component {
     state={
         post: {
@@ -52,7 +52,9 @@ class NewPostForm extends Component {
                                 type="text" value={this.state.post.content}
                             />
                         </div>
-                    <button>Submit</button>   
+                    <FlatButton label="Submit" type="submit" style={{
+                        backgroundColor: "#72E0FF"
+                    }}/>
                     </form>
             </div>
         );
