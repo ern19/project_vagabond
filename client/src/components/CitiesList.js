@@ -23,7 +23,9 @@ class CitiesList extends Component {
                                     <img src={city.photo_url} alt="city pic" />
                                 </CardMedia>
                                 <CardText style={{
-                                                   textAlign: "center"
+                                     margin: "5px",
+                                    textAlign: "center",
+                                    
                                 }}>
                                     
                                     {city.description}
