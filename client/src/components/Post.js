@@ -23,11 +23,13 @@ class Post extends Component {
     }
 
     deletePost = async () => {
-        const cityId = this.props.match.params.cityId
-        const postId  = this.props.match.params.postId
-        
-        const res = await axios.delete(`/api/cities/${cityId}/posts/${postId}`)
-        this.setState({post: res.data, redirectToCity: true})  
+        if(window.confirm('Delete the item?')) {
+            const cityId = this.props.match.params.cityId
+            const postId  = this.props.match.params.postId
+            
+            const res = await axios.delete(`/api/cities/${cityId}/posts/${postId}`)
+            this.setState({post: res.data, redirectToCity: true})  
+        }
     }
     render() {
         const cityId = this.props.match.params.cityId
@@ -38,7 +40,7 @@ class Post extends Component {
             <div>
                 <h2>{this.state.post.title}</h2>
                 <p>{this.state.post.content}</p>
-                <button onClick={() => this.deletePost()}>Delete this post</button>
+                <button onClick={() => {this.deletePost()}}>Delete this post</button>
             </div>
         );
     }
