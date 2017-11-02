@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import styled from "styled-components";
+
+
 class CitiesList extends Component {
     render() {
         return (
@@ -9,13 +12,20 @@ class CitiesList extends Component {
                 {
                     this.props.cities.map((city, index) => {
                         return (
-                            <Card>
+                            <Card style={{
+                                margin: "5px",
+                                textAlign: "center"
+
+                            }}>
                                 <CardMedia
                                     overlay={<CardTitle title={city.name} />}
                                     >
                                     <img src={city.photo_url} alt="city pic" />
                                 </CardMedia>
-                                <CardText>
+                                <CardText style={{
+                                                   textAlign: "center"
+                                }}>
+                                    
                                     {city.description}
                                 </CardText>
                                 <Link to={`/cities/${city.id}`}>View posts for {city.name}</Link>
