@@ -8,7 +8,8 @@ class NewPostForm extends Component {
         post: {
             title: "",
             content: ""
-        }
+        },
+        
     }
         
         
@@ -20,9 +21,16 @@ class NewPostForm extends Component {
         console.log(this.state.post)
     }
 
-
+    handleSubmit = async (event) => {
+        event.preventDefault()
+        const cityId = this.props.city.id
+        const response = await axios.post(`/api/cities/${cityId}/posts`, {
+            "post": this.state.post
+        })
+    }
 
     render() {
+        
         return (
             <div>
                 <h1>New Post</h1>
