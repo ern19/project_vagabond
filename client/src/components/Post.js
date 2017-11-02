@@ -22,7 +22,7 @@ class Post extends Component {
         }
     }
     deletePost = async () => {
-        if(window.confirm('Delete the item?')) {
+        if(window.confirm(`Are you sure you want to delete ${this.state.post.title}?`)) {
             const cityId = this.props.match.params.cityId
             const postId = this.props.match.params.postId
             
