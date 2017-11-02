@@ -6,6 +6,7 @@ import axios from 'axios'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import CitiesList from './components/CitiesList.js'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import City from './components/City.js'
 class App extends Component {
 
   state = {
@@ -32,7 +33,7 @@ class App extends Component {
             
             <Switch>
               <Route exact path="/" render={CitiesListComponent} />
-              
+              <Route exact path="/cities/:cityId" component={City} />
 
             </Switch>
           </div>

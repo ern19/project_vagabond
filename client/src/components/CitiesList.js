@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 
+import {Link} from 'react-router-dom'
 class CitiesList extends Component {
     render(props) {
         return (
@@ -17,6 +18,7 @@ class CitiesList extends Component {
                                 <CardText>
                                     {city.description}
                                 </CardText>
+                                <Link to={`/cities/${city.id}`}>View posts for {city.name}</Link>
                             </Card>
                         )
                     })
