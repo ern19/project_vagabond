@@ -8,7 +8,7 @@ class City extends Component {
 
     state = {
         city: {},
-        posts: []
+        posts: [],
     }
 
     async componentWillMount() {
@@ -46,8 +46,7 @@ class City extends Component {
                         </CardText>
                         
                     </Card>
-                    <Link to={`/cities/${cityId}/posts/new`}>Create New Post</Link>
-                    <NewPostForm/>
+                    <NewPostForm city={this.state.city}/>
                     <PostList posts={this.state.posts} city={this.state.city}/>
                     
             

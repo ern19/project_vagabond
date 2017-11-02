@@ -8,7 +8,7 @@ class Api::CitiesController < ApplicationController
         render json: @city
     end
     def create
-        @acity = City.create!(city_params)
+        @city = City.create!(city_params)
         render json: @city
     end
     def update

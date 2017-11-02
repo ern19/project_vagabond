@@ -12,8 +12,8 @@ class Api::PostsController < ApplicationController
             @city = City.find(params[:city_id])
             @post = Post.new(post_params)
     
-           city.posts << @post
-            city.save!
+            @city.posts << @post
+            @city.save!
             render json: @post
         end
         def update

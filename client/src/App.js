@@ -9,7 +9,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import City from './components/City.js'
 import Post from './components/Post.js'
 import NewPostForm from './components/NewPostForm.js'
-
+import PostUpdate from './components/PostUpdate.js'
 
 class App extends Component {
 
@@ -39,8 +39,8 @@ class App extends Component {
               <Route exact path="/" render={CitiesListComponent} />
               <Route exact path="/cities/:cityId" component={City} />
               <Route exact path="/cities/:cityId/posts/new" component={NewPostForm} />
+              <Route exact path="/cities/:cityId/posts/:postId/edit" component={PostUpdate} />
               <Route exact path="/cities/:cityId/posts/:postId" component={Post} />
-              
             </Switch>
           </div>
         </Router>
