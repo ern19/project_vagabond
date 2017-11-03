@@ -12,7 +12,14 @@ Link{
 }
 h1{
   font-family: 'Bungee Shade', cursive;
+  margin: auto;
 }
+h4{
+  font-family: 'Bungee Shade', cursive;
+  color: #747578;
+  text-shadow: 1px 1px #72E0FF;
+}
+
 p{
   font-family: 'Roboto', sans-serif
 }

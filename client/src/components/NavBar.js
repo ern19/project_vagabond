@@ -27,14 +27,20 @@ const HeaderLink = styled.a`
     text-decoration: none;
     color: #747578;
     text-shadow: 2px 2px #72E0FF;
+    margin: 10px;
+`
 
+const Wander = styled.h4`
+    margin: 10px;
 `
 class NavBar extends Component {
     render() {
         return (
             <StyledNavBar>
-                
+                <div>
                     <h1><HeaderLink href={'/'}>Vagabond</HeaderLink></h1>
+                    <Wander>wander wisely</Wander>
+                </div>
                 <div><StyledAnchors href="#">SIGN UP</StyledAnchors>
                     <StyledAnchors href="#">LOG-IN</StyledAnchors></div>
                     
