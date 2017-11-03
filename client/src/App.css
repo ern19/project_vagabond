@@ -13,6 +13,8 @@ Link{
 h1{
   font-family: 'Bungee Shade', cursive;
   margin: auto;
+  text-shadow: 1px 1px #72E0FF;
+  color: #747578
 }
 h4{
   font-family: 'Bungee Shade', cursive;
@@ -25,6 +27,7 @@ p{
 }
 textarea{
   background: transparent;
-  border: 1px solid #747578
-
+  border: 1px solid #747578;
+  width: 300px;
+  height: 150px;
 }

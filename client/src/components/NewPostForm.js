@@ -46,8 +46,9 @@ class NewPostForm extends Component {
                             />
                         </div>
                         <div>
-                            <label htmlFor="content">Post Content:  </label>
-                            <textarea 
+                            <label htmlFor="content"></label>
+                            <textarea
+                                placeholder="Your post goes here!"
                                 onChange={this.handleChange} name="content"
                                 type="text" value={this.state.post.content}
                             />
