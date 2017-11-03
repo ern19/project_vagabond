@@ -7,6 +7,7 @@ class PostUpdate extends Component {
     state = {
         post: {},
         redirectToPost: false
+        
     }
 
     async componentWillMount () {

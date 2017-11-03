@@ -9,7 +9,8 @@ class NewPostForm extends Component {
             title: "",
             content: "",
         },
-        refresh: false
+        refresh: false,
+        flashError: false
     }
         
         
@@ -23,16 +24,26 @@ class NewPostForm extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault()
-        const cityId = this.props.city.id
-        const response = await axios.post(`/api/cities/${cityId}/posts`, {
-            "post": this.state.post
-        })
-        this.setState({refresh: true})
+        try {
+            const cityId = this.props.city.id
+            const response = await axios.post(`/api/cities/${cityId}/posts`, {
+                "post": this.state.post
+            })
+            this.setState({refresh: true}) 
+        } catch (error) {
+            this.setState({flashError: true})
+            console.log(this.state.flashError)
+        }
+        
     }
 
     render() {
         if (this.state.refresh){
             window.location.reload()
+        }
+        if(this.state.flashError){
+            let div = document.getElementById("flash")
+            div.style.display = "block"
         }
         return (
             <div style={{margin: "10px"}}>
@@ -56,6 +67,7 @@ class NewPostForm extends Component {
                     <FlatButton label="Submit" type="submit" style={{
                         backgroundColor: "#72E0FF"
                     }}/>
+                    <div id="flash" style={{color: "red", display: "none"}}>Please fill out the required fields.</div>
                     </form>
             </div>
         );
