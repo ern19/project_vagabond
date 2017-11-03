@@ -13,10 +13,15 @@ class PostList extends Component {
                     this.props.posts.map((post, index) => {
                         return (
                             
-                            <Card>
+                            <Card style={{
+                                margin: "10px"
+                            }}>
                                 <CardHeader
                                 title={post.title}
-                                
+                                style={{
+                                    fontWeight: "bold",
+                                    fontSize: "20px"
+                                }}
                                 />
                                 <CardText>
                                     {post.content}
