@@ -4,6 +4,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import PostList from './PostList'
 import {Link} from 'react-router-dom'
 import NewPostForm from './NewPostForm'
+
 class City extends Component {
      // this sets the state of the 'city' object and the 'posts' array 
     state = {

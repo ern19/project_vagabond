@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
-
 import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
