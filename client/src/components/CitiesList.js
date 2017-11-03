@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
-
+import FlatButton from 'material-ui/FlatButton'
 import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
@@ -14,7 +14,7 @@ class CitiesList extends Component {
                         return (
                             <Card style={{
                                 margin: "5px",
-                                textAlign: "center"
+                                
 
                             }}>
                                 <CardMedia
@@ -24,13 +24,16 @@ class CitiesList extends Component {
                                 </CardMedia>
                                 <CardText style={{
                                      margin: "5px",
-                                    textAlign: "center",
+                                    
                                     
                                 }}>
                                     
                                     {city.description}
                                 </CardText>
-                                <Link to={`/cities/${city.id}`}>View posts for {city.name}</Link>
+                                <FlatButton href={`/cities/${city.id}`} 
+                                            label={`View posts for ${city.name}`}
+                                            style={{backgroundColor: "#72E0FF",
+                                                    margin: "3px"}}/>
                             </Card>
                         )
                     })

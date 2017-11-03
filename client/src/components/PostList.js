@@ -16,7 +16,8 @@ class PostList extends Component {
                         return (
                             
                             <Card style={{
-                                margin: "10px"
+                                margin: "10px",
+                                color: "rgba(32.86. 33.14. 33.99, 0.4)"
                             }}>
                                 <CardHeader
                                 title={post.title}

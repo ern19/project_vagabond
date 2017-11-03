@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TextField from "material-ui/TextField"
 import axios from 'axios'
 import {Redirect} from 'react-router-dom'
-
+import FlatButton from 'material-ui/FlatButton'
 class PostUpdate extends Component {
     state = {
         post: {},
@@ -49,7 +49,7 @@ class PostUpdate extends Component {
         }
         return (
 
-            <div>
+            <div style={{marginTop: "20px"}}>
                 <h1>Edit Post</h1>
                 <form onSubmit={this.updatePost}>
                     <div>
@@ -60,13 +60,16 @@ class PostUpdate extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="content">Post Content:  </label>
-                        <TextField
+                        <label htmlFor="content"></label>
+                        <textarea
+                            
                             onChange={this.handleChange} name="content"
                             type="text" value={this.state.post.content}
                         />
                     </div>
-                    <button>Submit</button>
+                    <FlatButton type="submit" label="submit" style={{textShadow: "1px 1px #72E0FF",
+                                                                     color: "#747578"}}/>
+                    <FlatButton href={`/cities/${cityId}`}label="Go Back"/>
                 </form>
                    
             </div>

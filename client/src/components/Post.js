@@ -55,6 +55,7 @@ class Post extends Component {
             <CardActions>
               <FlatButton onClick={() => {this.deletePost()}} label="Delete this post" />
               <FlatButton href={`/cities/${cityId}/posts/${postId}/edit`}label="Edit this post" />
+              <FlatButton href={`/cities/${cityId}`}label="Go Back"/>
             </CardActions>
           </Card>
 

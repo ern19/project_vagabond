@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
+import FlatButton from 'material-ui/FlatButton'
 import PostList from './PostList'
 import {Link} from 'react-router-dom'
 import NewPostForm from './NewPostForm'
@@ -47,7 +48,9 @@ class City extends Component {
                             <br />
                             scroll down to see the best of {this.state.city.name}
                         </CardText>
-                        
+                        <CardActions>
+                            <FlatButton href={`/`} label="Back to Cities" style={{backgroundColor: "#72E0FF"}}/>
+                        </CardActions>
                     </Card>
                     <NewPostForm city={this.state.city}/>
                     <PostList posts={this.state.posts} city={this.state.city}/>
