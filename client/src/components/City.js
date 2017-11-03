@@ -43,6 +43,9 @@ class City extends Component {
                         </CardMedia>
                         <CardText>
                             {this.state.city.description}
+                            <br />
+                            <br />
+                            scroll down to see the best of {this.state.city.name}
                         </CardText>
                         
                     </Card>

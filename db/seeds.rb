@@ -21,11 +21,6 @@ atlanta = City.new({
         })]
 })
 
-brandon = User.new({
-    name: "",
-    email: "",
-    profile_pic: "",
-    
-})
+
 
 atlanta.save

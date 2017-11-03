@@ -13,6 +13,7 @@ const StyledNavBar = styled.div`
 `
 const StyledAnchors = styled.a`
     font-size: 18px;
+    
     padding: 20px;
     color: #747578;
     text-shadow: 1px 1px #72E0FF;
@@ -21,6 +22,7 @@ const StyledAnchors = styled.a`
     &:hover {
         font-size: 20px;
     }
+    
 `
 
 const HeaderLink = styled.a`
@@ -29,7 +31,10 @@ const HeaderLink = styled.a`
     text-shadow: 2px 2px #72E0FF;
     margin: 10px;
 `
-
+const SignUp = styled.div`
+    display: flex;
+    flex: row;
+`
 const Wander = styled.h4`
     margin: 10px;
 `
@@ -41,8 +46,8 @@ class NavBar extends Component {
                     <h1><HeaderLink href={'/'}>Vagabond</HeaderLink></h1>
                     <Wander>wander wisely</Wander>
                 </div>
-                <div><StyledAnchors href="#">SIGN UP</StyledAnchors>
-                    <StyledAnchors href="#">LOG-IN</StyledAnchors></div>
+                <SignUp><StyledAnchors href="#">SIGN UP</StyledAnchors>
+                    <StyledAnchors href="#">LOG-IN</StyledAnchors></SignUp>
                     
                 
             </StyledNavBar>
