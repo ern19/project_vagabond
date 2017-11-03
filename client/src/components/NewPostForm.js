@@ -35,7 +35,7 @@ class NewPostForm extends Component {
             window.location.reload()
         }
         return (
-            <div>
+            <div style={{margin: "10px"}}>
                 <h1>New Post</h1>
                     <form onSubmit={this.handleSubmit}>
                         <div>
