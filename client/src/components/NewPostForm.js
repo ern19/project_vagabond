@@ -47,7 +47,7 @@ class NewPostForm extends Component {
                         </div>
                         <div>
                             <label htmlFor="content">Post Content:  </label>
-                            <TextField 
+                            <textarea 
                                 onChange={this.handleChange} name="content"
                                 type="text" value={this.state.post.content}
                             />

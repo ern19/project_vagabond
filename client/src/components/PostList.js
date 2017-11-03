@@ -11,6 +11,7 @@ class PostList extends Component {
             <div>
                 {
                     this.props.posts.map((post, index) => {
+                       const content = post.content.split(" ").splice(0, 50).join(" ")
                         return (
                             
                             <Card style={{
@@ -24,7 +25,7 @@ class PostList extends Component {
                                 }}
                                 />
                                 <CardText>
-                                    {post.content}
+                                    <p>{content}... </p>
                                 </CardText>
                                 <CardActions>
                                     <FlatButton href={`/cities/${this.props.city.id}/posts/${post.id}`}
