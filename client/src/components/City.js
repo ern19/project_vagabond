@@ -46,7 +46,7 @@ class City extends Component {
                             {this.state.city.description}
                             <br />
                             <br />
-                            scroll down to see the best of {this.state.city.name}
+                            
                         </CardText>
                         <CardActions>
                             <FlatButton href={`/`} label="Back to Cities" style={{backgroundColor: "#72E0FF"}}/>

@@ -3,16 +3,18 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import City from './City.js'
 import {Link} from 'react-router-dom'
 import FlatButton from 'material-ui/FlatButton';
+import timeago from 'timeago.js'
 
 class PostList extends Component {
    
     render(props) {
+       
         return (
             <div>
                 {
                     this.props.posts.map((post, index) => {
                        const content = post.content.split(" ").splice(0, 50).join(" ")
-                       const submitDate = post.created_at.split("").splice(0,10).join("")
+                       const timeAgo = timeago().format(post.created_at)
                         return (
                             
                             <Card style={{
@@ -21,7 +23,7 @@ class PostList extends Component {
                             }}>
                                 <CardHeader
                                 title={post.title}
-                                subtitle={`Submitted on ${submitDate}`}
+                                subtitle={timeAgo}
                                 style={{
                                     fontWeight: "bold",
                                     fontSize: "20px"

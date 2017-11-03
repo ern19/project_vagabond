@@ -4,8 +4,7 @@ import {Link, Redirect} from 'react-router-dom'
 import styled from 'styled-components'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-
-
+import timeago from 'timeago.js'
 
 
 class Post extends Component {
@@ -37,6 +36,7 @@ class Post extends Component {
         }
     }
     render() {
+        const timeAgo = timeago().format(this.state.post.created_at)
         const cityId = this.props.match.params.cityId
         const postId = this.props.match.params.postId
         if (this.state.redirectToCity) {
@@ -46,7 +46,7 @@ class Post extends Component {
           <Card>
             <CardHeader
               title={this.state.post.title}
-              
+              subtitle={timeAgo}
             />
             
             <CardText expandable={false}>
