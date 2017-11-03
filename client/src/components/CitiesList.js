@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 
 class CitiesList extends Component {
+
     render() {
         return (
             <div>
