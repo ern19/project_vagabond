@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
+// this iss the custom CSS for 
 const StyledNavBar = styled.div` 
     display: flex;
     justify-content: space-between;
