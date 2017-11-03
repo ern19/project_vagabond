@@ -16,7 +16,6 @@ class PostUpdate extends Component {
         const res = await axios.get(`/api/cities/${cityId}/posts/${postId}`)
         console.table(res.data)
         this.setState({ post: res.data })
-
     }
 
     handleChange = (event, postId) => {
