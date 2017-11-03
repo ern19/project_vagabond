@@ -27,7 +27,6 @@ class PostUpdate extends Component {
         this.setState({post: clonedPost})
         console.log(this.state.post)
     }
-
     updatePost = async (event) => {
         event.preventDefault()
         const { cityId } = this.props.match.params
