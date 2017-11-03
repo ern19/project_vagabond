@@ -23,3 +23,8 @@ h4{
 p{
   font-family: 'Roboto', sans-serif
 }
+textarea{
+  background: transparent;
+  border: 1px solid #747578
+
+}

@@ -1,7 +1,7 @@
 
 class Api::PostsController < ApplicationController
         def index
-            @posts = City.find(params[:city_id]).posts
+            @posts = City.find(params[:city_id]).posts.reverse
             render json: @posts
         end
         def show

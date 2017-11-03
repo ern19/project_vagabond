@@ -12,6 +12,7 @@ class PostList extends Component {
                 {
                     this.props.posts.map((post, index) => {
                        const content = post.content.split(" ").splice(0, 50).join(" ")
+                       const submitDate = post.created_at.split("").splice(0,10).join("")
                         return (
                             
                             <Card style={{
@@ -19,6 +20,7 @@ class PostList extends Component {
                             }}>
                                 <CardHeader
                                 title={post.title}
+                                subtitle={`Submitted on ${submitDate}`}
                                 style={{
                                     fontWeight: "bold",
                                     fontSize: "20px"
