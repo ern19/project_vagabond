@@ -46,8 +46,7 @@ class NavBar extends Component {
                     <h1><HeaderLink href={'/'}>Vagabond</HeaderLink></h1>
                     <Wander>wander wisely</Wander>
                 </div>
-                <SignUp><StyledAnchors href="#">SIGN UP</StyledAnchors>
-                    <StyledAnchors href="#">LOG-IN</StyledAnchors></SignUp>
+               
                     
                 
             </StyledNavBar>
@@ -55,4 +54,9 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+export default NavBar; 
+
+{/* <SignUp>
+    <StyledAnchors href="#">SIGN UP</StyledAnchors>
+    <StyledAnchors href="#">LOG-IN</StyledAnchors>
+</SignUp> */}
