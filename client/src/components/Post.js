@@ -53,7 +53,11 @@ class Post extends Component {
               {this.state.post.content}
             </CardText>
             <CardActions>
-              <FlatButton onClick={() => {this.deletePost()}} label="Delete this post" />
+              <FlatButton
+                style={{
+                    textShadow: "1px 1px rgb(255, 109, 18)"
+                }}
+                onClick={() => {this.deletePost()}} label="Delete this post" />
               <FlatButton href={`/cities/${cityId}/posts/${postId}/edit`}label="Edit this post" />
               <FlatButton href={`/cities/${cityId}`}label="Go Back"/>
             </CardActions>
