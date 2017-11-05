@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import {Redirect} from 'react-router-dom'
 import TextField from "material-ui/TextField"
 import FlatButton from 'material-ui/FlatButton';
 class NewPostForm extends Component {
@@ -26,15 +25,14 @@ class NewPostForm extends Component {
         event.preventDefault()
         try {
             const cityId = this.props.city.id
-            const response = await axios.post(`/api/cities/${cityId}/posts`, {
+            await axios.post(`/api/cities/${cityId}/posts`, {
                 "post": this.state.post
             })
             this.setState({refresh: true}) 
         } catch (error) {
             this.setState({flashError: true})
             console.log(this.state.flashError)
-        }
-        
+        } 
     }
 
     render() {

@@ -1,23 +1,21 @@
 import React, {Component} from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
-import City from './City.js'
-import {Link} from 'react-router-dom'
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton';
 import timeago from 'timeago.js'
 
 class PostList extends Component {
    
-    render(props) {
-       
+    render() {
+       const {posts} = this.props
         return (
             <div>
                 {
-                    this.props.posts.map((post, index) => {
+                    posts.map((post) => {
                        const content = post.content.split(" ").splice(0, 50).join(" ")
                        const timeAgo = timeago().format(post.created_at)
                         return (
                             
-                            <Card style={{
+                            <Card key={post.id} style={{
                                 margin: "10px",
                                 color: "rgba(32.86. 33.14. 33.99, 0.4)"
                             }}>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/NavBar.js'
-import styled from 'styled-components'
 import axios from 'axios'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import CitiesList from './components/CitiesList.js'
@@ -22,7 +21,6 @@ class App extends Component {
   async componentWillMount() {
       try {
         const response = await axios.get('/api/cities')
-        console.table(response.data)
         this.setState({cities: response.data})
       } catch (error) { 
         console.log(error)
