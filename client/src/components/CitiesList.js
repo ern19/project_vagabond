@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
+import {Card, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
-import { Link } from 'react-router-dom'
-import styled from "styled-components";
-
 
 class CitiesList extends Component {
     render() {
+        const {cities} = this.props
         return (
             <div>
                 {
-                    this.props.cities.map((city, index) => {
+                    cities.map((city) => {
                         return (
-                            <Card style={{
+                            <Card key={city.id} style={{
                                 margin: "5px",
                                 
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import {Link, Redirect} from 'react-router-dom'
-import styled from 'styled-components'
+import {Redirect} from 'react-router-dom'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import timeago from 'timeago.js'
@@ -25,6 +24,8 @@ class Post extends Component {
         } catch (error) {
             console.log(error)
         }
+        console.log(this.props)
+        console.log(this.state)
     }
     deletePost = async () => {
         if(window.confirm(`Are you sure you want to delete ${this.state.post.title}?`)) {
@@ -39,6 +40,7 @@ class Post extends Component {
         const timeAgo = timeago().format(this.state.post.created_at)
         const cityId = this.props.match.params.cityId
         const postId = this.props.match.params.postId
+        
         if (this.state.redirectToCity) {
             return <Redirect to ={`/cities/${cityId}`}/>
         }
