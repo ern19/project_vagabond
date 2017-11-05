@@ -1,4 +1,4 @@
-# README
+# Vagabond
 
 Making Project Vagabond was a unique experience for us as it was our first team coding project. Our instructors provided us with a basic wireframe, then we had ~2 days to build it from the ground up. It's a blog-style travel app where anyone can share info about attractions in their favorite city. 
 
